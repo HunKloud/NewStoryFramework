@@ -1,0 +1,15 @@
+WrapSpacerWidgetClass rootFrame {
+ clipchildren 0
+ ignorepointer 1
+ size 1 0.05
+ halign center_ref
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ priority 1000
+ Padding 5
+ Margin 0
+ content_halign center
+ content_valign center
+}

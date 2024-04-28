@@ -1,0 +1,80 @@
+PanelWidgetClass rootFrame {
+ ignorepointer 1
+ color 0 0 0 0.7843
+ size 1 54
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 1
+ style rover_sim_colorable
+ {
+  TextWidgetClass Key {
+   ignorepointer 0
+   position 0 0
+   size 0.5 1
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "Key:"
+   font "gui/fonts/metronbook28"
+   "text offset" 10 0
+   "exact text" 0
+   "size to text h" 0
+   "size to text v" 0
+   "text valign" center
+  }
+  FrameWidgetClass Value {
+   ignorepointer 1
+   position 0 0
+   size 0.5 1
+   halign right_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   {
+    EditBoxWidgetClass Text {
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style ServerBrowser
+     "Use default text" 0
+     "exact text" 0
+     font "gui/fonts/metronbook22"
+    }
+    FrameWidgetClass IconFrame {
+     ignorepointer 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass ImageWidget0 {
+       ignorepointer 1
+       size 48 48
+       halign center_ref
+       valign center_ref
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       image0 "set:dayz_gui image:circle"
+       mode blend
+       "src alpha" 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

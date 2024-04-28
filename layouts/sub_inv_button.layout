@@ -1,0 +1,39 @@
+PanelWidgetClass rootFrame {
+ ignorepointer 0
+ color 0 0 0 0.9412
+ size 388 1
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 0
+ scriptclass "SizeToChild"
+ style rover_sim_black_2
+ {
+  TextWidgetClass title {
+   ignorepointer 1
+   color 0.902 0.902 0.902 1
+   size 26 49
+   halign center_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Inventory"
+   font "gui/fonts/sdf_metronbook24"
+   "exact text" 1
+   "exact text size" 24
+   "size to text h" 1
+   "size to text v" 0
+   "text halign" center
+   "text valign" center
+  }
+ }
+ {
+  ScriptParamsClass {
+   m_ChildName "title"
+   m_HorizontalOffset 30
+   m_ResizeHorizontal 1
+  }
+ }
+}

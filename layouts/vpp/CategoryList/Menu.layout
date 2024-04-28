@@ -1,0 +1,435 @@
+WindowWidgetClass rootFrame {
+ clipchildren 0
+ color 1 0 0 1
+ position 0 0
+ size 0.45 0.65
+ hexactpos 1
+ vexactpos 1
+ hexactsize 0
+ vexactsize 0
+ draggable 0
+ {
+  PanelWidgetClass Main {
+   visible 1
+   clipchildren 1
+   inheritalpha 0
+   color 0 0 0 0.549
+   position 0 0.03
+   size 1 0.97
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   scaled 1
+   draggable 0
+   style rover_sim_colorable
+   "no focus" 0
+   {
+    PanelWidgetClass ListPanel {
+     ignorepointer 1
+     size 0.5 1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style blank
+     {
+      PanelWidgetClass ListHeader {
+       ignorepointer 1
+       color 0 0 0 0.5882
+       position 0.00096 0.005
+       size 0.98 0.065
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style rover_sim_colorable
+       {
+        PanelWidgetClass Categories {
+         ignorepointer 1
+         color 0.098 0.098 0.098 1
+         size 0.5 1
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+         {
+          ButtonWidgetClass CategoriesButton {
+           ignorepointer 1
+           color 0 0 0 1
+           size 1 1
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style Empty
+           text "Categories"
+           font "gui/fonts/metronbook22"
+          }
+         }
+        }
+        PanelWidgetClass SubCategories {
+         ignorepointer 1
+         color 0 0 0 0.5882
+         size 0.5 1
+         halign right_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+         {
+          ButtonWidgetClass SubCategoriesButton {
+           color 0 0 0 1
+           position 0 0
+           size 1 1
+           halign right_ref
+           valign center_ref
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           style Empty
+           text "SubCategories"
+           font "gui/fonts/metronbook22"
+          }
+         }
+        }
+       }
+      }
+      ScrollWidgetClass List {
+       visible 1
+       disabled 0
+       clipchildren 1
+       inheritalpha 0
+       color 0.7843 0.7843 0.7843 1
+       position 0 0.06
+       size 0.98 0.865
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       style blank
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass CategoriesList {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 5
+         Margin 0
+         "Size To Content V" 1
+         Columns 1
+        }
+        GridSpacerWidgetClass SubCategoriesList {
+         visible 0
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 5
+         Margin 0
+         "Size To Content V" 1
+         Columns 1
+        }
+       }
+      }
+      FrameWidgetClass ListButtons {
+       ignorepointer 1
+       position 0 0.005
+       size 0.98 0.05
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        PanelWidgetClass Create {
+         ignorepointer 1
+         color 0.098 0.098 0.098 1
+         size 0.495 1
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+         {
+          ButtonWidgetClass CreateButton {
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Empty
+           text "Create"
+           font "gui/fonts/metronbook22"
+          }
+         }
+        }
+        PanelWidgetClass Delete {
+         ignorepointer 1
+         color 0.4275 0 0 1
+         size 0.495 1
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+         {
+          ButtonWidgetClass DeleteButton {
+           disabled 1
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Empty
+           text "Delete"
+           font "gui/fonts/metronbook22"
+           "disabled text color" 0.6627 0.6627 0.6627 1
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass SettingsPanel {
+     ignorepointer 1
+     position 0 0
+     size 0.5 1
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      PanelWidgetClass SettingsHeader {
+       ignorepointer 1
+       color 0 0 0 0.5882
+       position 0.00096 0.005
+       size 0.9822 0.065
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style rover_sim_colorable
+       {
+        TextWidgetClass SettingsHeaderText {
+         ignorepointer 1
+         size 1 1
+         halign center_ref
+         valign center_ref
+         hexactpos 1
+         vexactpos 1
+         hexactsize 0
+         vexactsize 0
+         text "Settings"
+         font "gui/fonts/metronbook22"
+         "exact text" 0
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ScrollWidgetClass SettingsScroll {
+       ignorepointer 1
+       color 0.7843 0.7843 0.7843 1
+       position 0 0.06
+       size 0.98 0.865
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass CategorySettings {
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 5
+         Margin 0
+         "Size To Content V" 1
+         Columns 1
+        }
+        GridSpacerWidgetClass SubCategorySettings {
+         visible 0
+         ignorepointer 1
+         position 0 0
+         size 1 1
+         halign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         Padding 5
+         Margin 0
+         "Size To Content V" 1
+         Columns 1
+        }
+       }
+      }
+      FrameWidgetClass SettingsButtons {
+       ignorepointer 1
+       position 0 0.005
+       size 0.98 0.05
+       halign center_ref
+       valign bottom_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        PanelWidgetClass Save {
+         disabled 0
+         ignorepointer 1
+         color 0 0.4275 0 1
+         size 0.495 1
+         halign right_ref
+         valign center_ref
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style rover_sim_colorable
+         {
+          ButtonWidgetClass SaveButton {
+           disabled 1
+           size 1 1
+           halign center_ref
+           valign center_ref
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Empty
+           text "Save"
+           font "gui/fonts/metronbook22"
+           "disabled text color" 0.6627 0.6627 0.6627 1
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass Line {
+     ignorepointer 1
+     color 0.5961 0.5961 0.5961 1
+     size 2 0.99
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 0
+     style rover_sim_colorable
+    }
+   }
+  }
+  PanelWidgetClass Header {
+   ignorepointer 0
+   size 1 0.028
+   halign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   draggable 1
+   style blank
+  }
+  PanelWidgetClass HeaderTitle {
+   ignorepointer 1
+   color 0 0 0 1
+   position 0 0
+   size 1 0.03
+   halign center_ref
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 0
+   scaled 0
+   draggable 0
+   style DayZDefaultPanel
+   {
+    TextWidgetClass Title {
+     ignorepointer 1
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Bold
+     text "Categories editor"
+     font "gui/fonts/sdf_MetronLight24"
+     "size to text h" 1
+     "size to text v" 1
+     "text halign" center
+     "text valign" center
+    }
+    ButtonWidgetClass BtnClose {
+     clipchildren 1
+     color 0 0 0 1
+     size 0.03 1
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     {
+      ImageWidgetClass ImageClose {
+       ignorepointer 1
+       color 1 0 0 1
+       size 0.97 1
+       halign right_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       image0 "set:ccgui_enforce image:Icon28EmptySlot"
+       mode additive
+       "src alpha" 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

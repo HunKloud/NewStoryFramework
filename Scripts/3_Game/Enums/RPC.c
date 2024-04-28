@@ -1,0 +1,5 @@
+enum ENewStoryGroupRPC
+{
+    RPC_MANAGER = -536871000,
+    PLAYER_MANAGER
+}

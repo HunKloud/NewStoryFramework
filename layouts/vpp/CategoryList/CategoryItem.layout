@@ -1,0 +1,41 @@
+PanelWidgetClass rootFrame {
+ color 0 0 0 0.7843
+ position 0 0
+ size 1 0.05
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ style rover_sim_colorable
+ {
+  CheckBoxWidgetClass Check {
+   disabled 1
+   position 0.005 0
+   size 0.02 1
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style Default
+   font "gui/fonts/metronbook22"
+  }
+  TextWidgetClass Name {
+   ignorepointer 1
+   color 0.7843 0.7843 0.7843 1
+   position 0.025 0
+   size 0.975 1
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "Category 1"
+   font "gui/fonts/metronbook22"
+   "exact text" 0
+   "size to text h" 0
+   "size to text v" 0
+   "text valign" center
+  }
+ }
+}
