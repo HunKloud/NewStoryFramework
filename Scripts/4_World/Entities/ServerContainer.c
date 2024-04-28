@@ -1,11 +1,11 @@
 class NewStoryGroupServerContainer: InventoryItem
 {
-    override bool IsInventoryItem()
+	override bool IsInventoryItem()
 	{
 		return false;
 	}
 
-    override bool IsInventoryVisible()
+	override bool IsInventoryVisible()
 	{
 		return false;
 	}

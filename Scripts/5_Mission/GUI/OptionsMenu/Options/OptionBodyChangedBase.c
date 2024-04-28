@@ -1,26 +1,26 @@
 class NewStoryGroupOptionBodyChangedBase: NewStoryGroupOptionBodyBase
 {
-    override void Apply()
-    {
-        bool is_changed = IsChanged();
+	override void Apply()
+	{
+		bool is_changed = IsChanged();
 
-        super.Apply();
+		super.Apply();
 
-        if ( is_changed ) {
-            OnChanged();
-        }
-    }
+		if ( is_changed ) {
+			OnChanged();
+		}
+	}
 
-    override void SetToDefaults()
-    {
-        bool is_changed = IsChanged();
+	override void SetToDefaults()
+	{
+		bool is_changed = IsChanged();
 
-        super.SetToDefaults();
+		super.SetToDefaults();
 
-        if ( is_changed ) {
-            OnChanged();
-        }
-    }
+		if ( is_changed ) {
+			OnChanged();
+		}
+	}
 
-    protected void OnChanged();
+	protected void OnChanged();
 }

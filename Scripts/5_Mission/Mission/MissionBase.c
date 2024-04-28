@@ -1,58 +1,58 @@
 modded class MissionBase: MissionBaseWorld
 {
-    override protected void NewStoryGroupConstructor()
-    {
-        bool isMissionServer    = IsNewStoryGroupMissionServer();
-        bool isMissionGameplay  = IsNewStoryGroupMissionGameplay();
+	override protected void NewStoryGroupConstructor()
+	{
+		bool isMissionServer	= IsNewStoryGroupMissionServer();
+		bool isMissionGameplay  = IsNewStoryGroupMissionGameplay();
 
-        if ( isMissionServer || isMissionGameplay ) {
-            NewStoryGroup().OnPreCreateMission();
-            NewStoryGroup().OnCreateMission();
-            NewStoryGroup().OnAfterCreateMission();
-        }
+		if ( isMissionServer || isMissionGameplay ) {
+			NewStoryGroup().OnPreCreateMission();
+			NewStoryGroup().OnCreateMission();
+			NewStoryGroup().OnAfterCreateMission();
+		}
 
-        if ( isMissionGameplay ) {
-            NewStoryGroup().OnPreCreateMissionGameplay();
+		if ( isMissionGameplay ) {
+			NewStoryGroup().OnPreCreateMissionGameplay();
 
-            NewStoryGroupPlayerManagerClient playerManagerClient = new NewStoryGroupPlayerManagerClient();
-            playerManagerClient.LoadModules();
-            NewStoryGroup().SetPlayerManagerClient( playerManagerClient );
+			NewStoryGroupPlayerManagerClient playerManagerClient = new NewStoryGroupPlayerManagerClient();
+			playerManagerClient.LoadModules();
+			NewStoryGroup().SetPlayerManagerClient( playerManagerClient );
 
-            NewStoryGroup().OnCreateMissionGameplay();
-            NewStoryGroup().OnAfterCreateMissionGameplay();
-        }
+			NewStoryGroup().OnCreateMissionGameplay();
+			NewStoryGroup().OnAfterCreateMissionGameplay();
+		}
 
-        if ( isMissionServer ) {
-            NewStoryGroup().OnPreCreateMissionServer();
-            NewStoryGroup().SetPlayerManagers( new NewStoryGroupPlayerManagersServer() );
-            NewStoryGroup().OnCreateMissionServer();
-            NewStoryGroup().OnAfterCreateMissionServer();
-        }
+		if ( isMissionServer ) {
+			NewStoryGroup().OnPreCreateMissionServer();
+			NewStoryGroup().SetPlayerManagers( new NewStoryGroupPlayerManagersServer() );
+			NewStoryGroup().OnCreateMissionServer();
+			NewStoryGroup().OnAfterCreateMissionServer();
+		}
 
-        super.NewStoryGroupConstructor();
-    }
+		super.NewStoryGroupConstructor();
+	}
 
-    void ~MissionBase()
-    {
-        bool isMissionServer    = IsNewStoryGroupMissionServer();
-        bool isMissionGameplay  = IsNewStoryGroupMissionGameplay();
+	void ~MissionBase()
+	{
+		bool isMissionServer	= IsNewStoryGroupMissionServer();
+		bool isMissionGameplay  = IsNewStoryGroupMissionGameplay();
 
-        if ( isMissionServer || isMissionGameplay ) {
-            NewStoryGroup().OnPreDestroyMission();
-            NewStoryGroup().OnDestroyMission();
-            NewStoryGroup().OnAfterDestroyMission();
-        }
+		if ( isMissionServer || isMissionGameplay ) {
+			NewStoryGroup().OnPreDestroyMission();
+			NewStoryGroup().OnDestroyMission();
+			NewStoryGroup().OnAfterDestroyMission();
+		}
 
-        if ( isMissionGameplay ) {
-            NewStoryGroup().OnPreDestroyMissionGameplay();
-            NewStoryGroup().OnDestroyMissionGameplay();
-            NewStoryGroup().OnAfterDestroyMissionGameplay();
-        }
+		if ( isMissionGameplay ) {
+			NewStoryGroup().OnPreDestroyMissionGameplay();
+			NewStoryGroup().OnDestroyMissionGameplay();
+			NewStoryGroup().OnAfterDestroyMissionGameplay();
+		}
 
-        if ( isMissionServer ) {
-            NewStoryGroup().OnPreDestroyMissionServer();
-            NewStoryGroup().OnDestroyMissionServer();
-            NewStoryGroup().OnAfterDestroyMissionServer();
-        }
-    }
+		if ( isMissionServer ) {
+			NewStoryGroup().OnPreDestroyMissionServer();
+			NewStoryGroup().OnDestroyMissionServer();
+			NewStoryGroup().OnAfterDestroyMissionServer();
+		}
+	}
 }

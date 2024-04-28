@@ -1,7 +1,7 @@
 modded class OptionSelectorBase: ScriptedWidgetEventHandler
 {
-    bool NewStoryGroupIsEnabled()
-    {
-        return m_Enabled;
-    }
+	bool NewStoryGroupIsEnabled()
+	{
+		return m_Enabled;
+	}
 }

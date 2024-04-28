@@ -12,7 +12,7 @@ class NewStoryGroupCore: INewStoryGroupCore
 	private ref NewStoryGroupBasePlayerInfo						m_BasePlayerInfo;
 	private ref NewStoryGroupEventContainerKeyHandler	m_EventContainerKeyHandler;
 	private ref NewStoryGroupCategoryList							m_CategoryList;
-	
+
 	private ref NewStoryGroupClientPlayerList					m_ClientPlayerList;
 
 	private ref NewStoryGroupGameTimeEvents						m_GameTimeEvents;
@@ -55,11 +55,6 @@ class NewStoryGroupCore: INewStoryGroupCore
 
 	override void OnPreCreateMissionServer()
 	{
-		int instanceId = GetGame().ServerConfigGetInt( "instanceId" );
-		m_StorageFolder = "$mission:storage_" + instanceId + "\\NewStoryGroup\\"
-
-		NewStoryGroupSystemFunction.CreateFolder( m_StorageFolder );
-
 		NewStoryGroupSystemFunction.CreateFolder( NEW_STORY_GROUP_FOLDER );
 		NewStoryGroupSystemFunction.CreateFolder( NEW_STORY_GROUP_CONFIG_FOLDER );
 		NewStoryGroupSystemFunction.CreateFolder( NEW_STORY_GROUP_DATA_FOLDER );
@@ -67,6 +62,18 @@ class NewStoryGroupCore: INewStoryGroupCore
 
 	override void OnCreateMissionServer()
 	{
+		if ( NewStoryGroupCoreSettings.REQUEST_STORAGE_FOLDER ) {
+			int instanceId = GetGame().ServerConfigGetInt( "instanceId" );
+			m_StorageFolder = "$mission:storage_" + instanceId + "\\";
+
+			// Да это полная шляпа, но другого способа увы нет
+			//  иначе придется 2 раза запускать сервер ( ´･･)ﾉ(._.`)
+			NewStoryGroupSystemFunction.CreateFolder( m_StorageFolder );
+
+			m_StorageFolder += "NewStoryGroup\\";
+			NewStoryGroupSystemFunction.CreateFolder( m_StorageFolder );
+		}
+
 		if ( NewStoryGroupCoreSettings.REQUEST_DISCORD_LOG ) {
 			m_DiscordLog = new NewStoryGroupDiscordLog();
 		}

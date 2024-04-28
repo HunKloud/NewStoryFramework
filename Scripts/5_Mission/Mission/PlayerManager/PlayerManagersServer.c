@@ -19,7 +19,7 @@ class NewStoryGroupPlayerManagersServer: INewStoryGroupPlayerManagersServer
 
 	void NewStoryGroupPlayerManagersServer()
 	{
-		m_List           = new map<string, ref NewStoryGroupPlayerManagerServer>();
+		m_List		   = new map<string, ref NewStoryGroupPlayerManagerServer>();
 		m_ConnectionList = new map<string, ref NewStoryGroupPlayerManagerServer>();
 	}
 

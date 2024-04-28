@@ -1,5 +1,3 @@
-#include <../hpp/GlobalVarible.hpp>
-
 class CfgPatches
 {
 	class NewStoryGroupFramework
@@ -54,7 +52,7 @@ class CfgVehicles
 		carveNavmesh = 1;
 		class Cargo
 		{
-			ITEM_CARGO_SIZE_COLUMNS_ROWS(10, 100)
+			itemsCargoSize[] = { 10, 100 };
 			openable = 0;
 			allowOwnedCargoManipulation = 0;
 		};
@@ -74,7 +72,7 @@ class CfgVehicles
 		displayName = "IS NOT FOR USED (DO NOT SPAWN!)";
 		class Cargo
 		{
-			ITEM_CARGO_SIZE_COLUMNS_ROWS(1000, 1000)
+			itemsCargoSize[] = { 1000, 1000 };
 			openable = 0;
 			allowOwnedCargoManipulation = 0;
 		};

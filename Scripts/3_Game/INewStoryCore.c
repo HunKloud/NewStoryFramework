@@ -49,6 +49,9 @@ class INewStoryGroupCore
 	void OnAfterInitMissionGameplay();
 	void OnAfterInitMissionServer();
 
+	void OnStartMission();
+	void OnStartGameplay();
+	void OnStartMissionServer();
 	// Вызываются после вызова 'PluginManagerDelete'
 	// Called after call 'PluginManagerDelete'
 	void OnPreDestroyMission();

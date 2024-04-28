@@ -13,6 +13,14 @@ modded class MissionServer: MissionBase
 		NewStoryGroup().OnAfterInitMissionServer();
 	}
 
+	override void OnMissionStart()
+	{
+		super.OnMissionStart();
+
+		NewStoryGroup().OnStartMission();
+		NewStoryGroup().OnStartMissionServer();
+	}
+
 	override protected bool IsNewStoryGroupMissionServer()
 	{
 		return true;

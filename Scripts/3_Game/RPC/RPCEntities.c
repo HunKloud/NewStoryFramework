@@ -1,7 +1,7 @@
 // class NewStoryGroupRPCEntitiesList
 // {
-//     void RegisterCallers()
-//     {
+//	 void RegisterCallers()
+//	 {
 
-//     }
+//	 }
 // }
